@@ -21,31 +21,26 @@ Se você ainda não tem o Linux instalado, você pode escolher uma distribuiçã
 
 Após a instalação do Linux, siga os passos abaixo para instalar o servidor Nginx.
 4.1. Atualizando o sistema
-
-bash
-
+```bash
 sudo apt update
 sudo apt upgrade -y
-
+```
 4.2. Instalando o Nginx
 
-bash
-
+```bash
 sudo apt install nginx -y
-
+```
 4.3. Iniciando e habilitando o Nginx
 
-bash
-
+```bash
 sudo systemctl start nginx
 sudo systemctl enable nginx
-
+```
 4.4. Verificando o status do Nginx
 
-bash
-
+```bash
 sudo systemctl status nginx
-
+```
 Acesse http://seu_ip em um navegador para confirmar que o Nginx está funcionando.
 
 !/bin/bash
@@ -71,33 +66,32 @@ fi
 
 5.2. Tornando o script executável
 
-bash
-
+```bash
 chmod +x monitor_nginx.sh
-
+```
 5.3. Executando o script em segundo plano
 
-bash
-
+```bash
 nohup ./monitor_nginx.sh &
-
+```
 6. Versionamento com Git
 
 Para versionar o projeto e subir para o GitHub, siga os passos abaixo.
 6.1. Inicializando um repositório Git
 
-bash
-
+```bash
 git init
-
+```
 6.2. Adicionando arquivos
 
-bash
-
+```bash
 git add monitor_nginx.sh
-
+```
 6.3. Realizando o commit
 
-bash
-
+```bash
 git commit -m "Adicionando script de monitoramento do Nginx"
+```
+```bash
+git push origin master
+```
